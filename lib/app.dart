@@ -1,4 +1,4 @@
-import 'package:client_app_focal_agent/l10n/l10n.dart';
+import 'package:client_app_focal_agent/core/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
