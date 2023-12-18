@@ -16,7 +16,12 @@ dependencies:
 
   flutter_localizations:
     sdk: flutter
+  get_it: ^7.6.4
   intl: ^0.18.0
+  lottie: ^2.7.0
+  dio: ^5.4.0
+  http_mock_adapter: ^0.6.1
+  shared_preferences: ^2.2.2
 
 dev_dependencies:
   flutter_test:
@@ -25,4 +30,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+    - assets/animation/
   generate: true
