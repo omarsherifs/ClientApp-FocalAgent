@@ -6,11 +6,12 @@ import 'package:dartz/dartz.dart';
 
 class ImplListHrEmployeeRepository implements BaseListHrEmployeeRepository {
   ImplListHrEmployeeRepository(this._baseEmployeesDataSource);
-  BaseEmployeesDataSource _baseEmployeesDataSource;
+  final BaseEmployeesDataSource _baseEmployeesDataSource;
   @override
   Future<Either<List<BaseEmployeeEntity>, AppError>> listEmployee() async {
     try {
-      return Left(await _baseEmployeesDataSource.getHrDepartmentEmployees());
+      final data = await _baseEmployeesDataSource.getHrDepartmentEmployees();
+      return Left(data);
     } on Exception catch (ex) {
       return Right(AppError(ex.toString()));
     }

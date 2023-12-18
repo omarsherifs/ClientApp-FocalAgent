@@ -9,8 +9,8 @@ class HrEmployeeModel extends BaseEmployeeEntity {
   factory HrEmployeeModel.fromJson(Map<String, dynamic> json) {
     return HrEmployeeModel(
       id: json['id'] as int,
-      firstName: json['name'] as String,
-      lastName: json['email'] as String,
+      firstName: json['firstName'] as String,
+      lastName: json['lastName'] as String,
     );
   }
 }

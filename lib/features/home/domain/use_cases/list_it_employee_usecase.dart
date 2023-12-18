@@ -4,8 +4,10 @@ import 'package:client_app_focal_agent/features/home/domain/entity/base_employee
 import 'package:client_app_focal_agent/features/home/domain/repositories/base_list_it_employee_repository.dart';
 import 'package:dartz/dartz.dart';
 
-class ListItDepartmentEmployees extends BaseUseCase<List<BaseEmployeeEntity>> {
-  ListItDepartmentEmployees({required this.baseListItEmployeeRepository});
+class ListItDepartmentEmployeesUseCase extends BaseUseCase<List<BaseEmployeeEntity>> {
+  ListItDepartmentEmployeesUseCase({
+    required this.baseListItEmployeeRepository,
+  });
   BaseListItEmployeeRepository baseListItEmployeeRepository;
 
   @override
