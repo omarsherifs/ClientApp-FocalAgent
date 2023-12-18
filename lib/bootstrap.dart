@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
+import 'package:client_app_focal_agent/core/services/dependacny_injection_service.dart';
 import 'package:flutter/widgets.dart';
 
 class AppBlocObserver extends BlocObserver {
@@ -26,8 +27,10 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   };
 
   Bloc.observer = const AppBlocObserver();
+  WidgetsFlutterBinding.ensureInitialized();
 
   // Add cross-flavor configuration here
+  DependencyInjectionServices().init();
 
   runApp(await builder());
 }
